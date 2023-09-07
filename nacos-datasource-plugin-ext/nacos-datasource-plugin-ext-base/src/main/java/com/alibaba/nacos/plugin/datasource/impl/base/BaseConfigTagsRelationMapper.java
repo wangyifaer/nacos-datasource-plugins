@@ -41,12 +41,7 @@ public class BaseConfigTagsRelationMapper extends ConfigTagsRelationMapperByMySq
     public String getLimitPageSqlWithOffset(String sql, int startOffset, int pageSize) {
         return databaseDialect.getLimitPageSqlWithOffset(sql, startOffset, pageSize);
     }
-    
-    @Override
-    public String getTableName() {
-        return TableConstant.CONFIG_TAGS_RELATION;
-    }
-    
+
     @Override
     public String findConfigInfo4PageFetchRows(Map<String, String> params, int tagSize, int startRow, int pageSize) {
         final String appName = params.get("appName");

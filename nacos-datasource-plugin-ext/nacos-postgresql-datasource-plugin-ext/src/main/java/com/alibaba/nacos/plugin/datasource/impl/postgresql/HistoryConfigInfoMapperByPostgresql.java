@@ -17,14 +17,14 @@
 package com.alibaba.nacos.plugin.datasource.impl.postgresql;
 
 import com.alibaba.nacos.plugin.datasource.constants.DatabaseTypeConstant;
-import com.alibaba.nacos.plugin.datasource.impl.mysql.HistoryConfigInfoMapperByMySql;
+import com.alibaba.nacos.plugin.datasource.impl.base.BaseHistoryConfigInfoMapper;
 
 /**
  * The postgresql implementation of HistoryConfigInfoMapper.
  *
  * @author Long Yu
  **/
-public class HistoryConfigInfoMapperByPostgresql extends HistoryConfigInfoMapperByMySql {
+public class HistoryConfigInfoMapperByPostgresql extends BaseHistoryConfigInfoMapper {
     
     @Override
     public String removeConfigHistory() {

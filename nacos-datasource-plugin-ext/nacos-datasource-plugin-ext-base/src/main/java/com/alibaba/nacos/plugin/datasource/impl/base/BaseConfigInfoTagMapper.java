@@ -33,12 +33,7 @@ public class BaseConfigInfoTagMapper extends ConfigInfoTagMapperByMySql {
     public BaseConfigInfoTagMapper() {
         databaseDialect = DatabaseDialectManager.getInstance().getDialect(getDataSource());
     }
-    
-    @Override
-    public String getTableName() {
-        return TableConstant.CONFIG_INFO_TAG;
-    }
-    
+
     @Override
     public String findAllConfigInfoTagForDumpAllFetchRows(int startRow, int pageSize) {
         String innerSql = databaseDialect.getLimitPageSqlWithOffset("SELECT id FROM config_info_tag  ORDER BY id ",

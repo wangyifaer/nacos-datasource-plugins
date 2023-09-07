@@ -34,12 +34,7 @@ public class BaseConfigInfoBetaMapper extends ConfigInfoBetaMapperByMySql {
     public BaseConfigInfoBetaMapper() {
         databaseDialect = DatabaseDialectManager.getInstance().getDialect(getDataSource());
     }
-    
-    @Override
-    public String getTableName() {
-        return TableConstant.CONFIG_INFO_BETA;
-    }
-    
+
     public String getLimitPageSqlWithOffset(String sql,int startRow, int pageSize) {
         return databaseDialect.getLimitPageSqlWithOffset(sql, startRow, pageSize);
     }

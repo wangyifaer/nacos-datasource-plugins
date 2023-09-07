@@ -35,11 +35,6 @@ public class BaseConfigInfoAggrMapper extends ConfigInfoAggrMapperByMySql {
     }
     
     @Override
-    public String getTableName() {
-        return TableConstant.CONFIG_INFO_AGGR;
-    }
-    
-    @Override
     public String findConfigInfoAggrByPageFetchRows(int startRow, int pageSize) {
         return databaseDialect.getLimitPageSqlWithOffset(
                 "SELECT data_id,group_id,tenant_id,datum_id,app_name,content FROM config_info_aggr WHERE data_id= ? AND "
